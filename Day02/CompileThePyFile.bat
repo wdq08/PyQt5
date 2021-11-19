@@ -1,0 +1,1 @@
+D:\PythonPrograms\PyQt\venv\Scripts\pyinstaller.exe -F Program01.py -w -i="icon.ico"
