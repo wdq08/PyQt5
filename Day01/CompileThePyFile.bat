@@ -1,1 +1,1 @@
-D:\PythonPrograms\PyQt\venv\Scripts\pyinstaller.exe -F Program01.py -w -i="icon.ico"
+D:\PythonPrograms\PyQt\venv\Scripts\pyinstaller.exe -F Program01.py -w -i="icon.ico" --upx-dir=D:\PythonPrograms\PyQt\venv\Scripts\upx.exe
