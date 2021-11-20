@@ -17,24 +17,18 @@ class MainWindow(qtw.QWidget):
         my_label.setFont(qtg.QFont("Arial", 24))
         self.layout().addWidget(my_label)
 
-        # Create a spin box
-        my_spin = qtw.QSpinBox(self,
-                               value=10,
-                               maximum=100,
-                               minimum=0,
-                               singleStep=5,
-                               prefix="Your order is: # ")
-                               # suffix=" Order")
-        # my_spin = qtw.QDoubleSpinBox(self,
-        #                        value=10.00,
-        #                        maximum=100,
-        #                        minimum=0,
-        #                        singleStep=5.50,
-        #                        prefix="# ",
-        #                        suffix=" Order")
+        # Create a text box
+        my_text = qtw.QTextEdit(self,
+                                # plainText="This is real text!!!",
+                                html="<center><h1>Big Header Text!</h1></center>",
+                                acceptRichText=True,
+                                lineWrapMode=qtw.QTextEdit.FixedColumnWidth,
+                                lineWrapColumnOrWidth=80,
+                                placeholderText="Hello World!",
+                                readOnly=False)
         # Change the font size of the spin box
-        my_spin.setFont(qtg.QFont("Arial", 18))
-        self.layout().addWidget(my_spin)
+        # my_spin.setFont(qtg.QFont("Arial", 18))
+        self.layout().addWidget(my_text)
 
         # Create a button
         my_button = qtw.QPushButton("Press me!", clicked=lambda: press_it())
@@ -45,7 +39,8 @@ class MainWindow(qtw.QWidget):
 
         def press_it():
             # add name to the label
-            my_label.setText(f'You picked , {my_spin.value()}')
+            my_label.setText(f'You typed , {my_text.toPlainText()}')
+            my_text.setPlainText("You pressed the button!")
 
 
 app = qtw.QApplication([])
