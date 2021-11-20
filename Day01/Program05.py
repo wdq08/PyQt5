@@ -24,7 +24,7 @@ class MainWindow(qtw.QWidget):
         form_layout.addRow("First name", f_name)
         form_layout.addRow("Last name", l_name)
         form_layout.addRow(qtw.QPushButton("Press me!",
-                                           clicked = lambda: press_it()))
+                                           clicked=lambda: press_it()))
 
         # Show the app
         self.show()
