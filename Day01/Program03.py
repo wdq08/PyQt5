@@ -17,21 +17,24 @@ class MainWindow(qtw.QWidget):
         my_label.setFont(qtg.QFont("Arial", 24))
         self.layout().addWidget(my_label)
 
-        # Create a combo box
-        my_combo = qtw.QComboBox(self,
-                                 editable=True,
-                                 insertPolicy=qtw.QComboBox.InsertAtTop)
-        # my_combo = qtw.QComboBox(self,
-        #                          editable=True,
-        #                          insertPolicy=qtw.QComboBox.InsertAtBottom)
-        # Add items to the combo box
-        my_combo.addItem("Hello")
-        my_combo.addItem("Goodbye")
-        my_combo.addItem("Nothing")
-        my_combo.addItems(["default", "Create", "anything"])
-        my_combo.insertItems(2, ["One", "Two", "Third thing"])
-        # Show the combo box
-        self.layout().addWidget(my_combo)
+        # Create a spin box
+        my_spin = qtw.QSpinBox(self,
+                               value=10,
+                               maximum=100,
+                               minimum=0,
+                               singleStep=5,
+                               prefix="Your order is: # ")
+                               # suffix=" Order")
+        # my_spin = qtw.QDoubleSpinBox(self,
+        #                        value=10.00,
+        #                        maximum=100,
+        #                        minimum=0,
+        #                        singleStep=5.50,
+        #                        prefix="# ",
+        #                        suffix=" Order")
+        # Change the font size of the spin box
+        my_spin.setFont(qtg.QFont("Arial", 18))
+        self.layout().addWidget(my_spin)
 
         # Create a button
         my_button = qtw.QPushButton("Press me!", clicked=lambda: press_it())
@@ -42,9 +45,7 @@ class MainWindow(qtw.QWidget):
 
         def press_it():
             # add name to the label
-            my_label.setText(f'You picked , {my_combo.currentText()}')
-            # my_label.setText(f'You picked , {my_combo.currentData()}')
-            # my_label.setText(f'You picked , {my_combo.currentIndex()}')
+            my_label.setText(f'You picked , {my_spin.value()}')
 
 
 app = qtw.QApplication([])
