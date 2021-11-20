@@ -1,1 +1,1 @@
-D:\PythonPrograms\PyQt\venv\Scripts\pyuic5.exe -o Program01.py Program01.ui
+D:\PythonPrograms\PyQt\venv\Scripts\pyuic5.exe -x Program01.ui -o Program01.py
