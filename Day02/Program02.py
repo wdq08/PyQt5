@@ -16,143 +16,143 @@ class Ui_MainWindow(object):
         self.outputLabel.setFrameShape(QtWidgets.QFrame.Box)
         self.outputLabel.setFrameShadow(QtWidgets.QFrame.Raised)
         self.outputLabel.setLineWidth(5)
-        self.outputLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.outputLabel.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.outputLabel.setIndent(0)
         self.outputLabel.setObjectName("outputLabel")
-        self.percentButton = QtWidgets.QPushButton(self.centralwidget)
+        self.percentButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("%"))
         self.percentButton.setGeometry(QtCore.QRect(10, 110, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.percentButton.setFont(font)
         self.percentButton.setObjectName("percentButton")
-        self.cButton = QtWidgets.QPushButton(self.centralwidget)
+        self.cButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("C"))
         self.cButton.setGeometry(QtCore.QRect(95, 110, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.cButton.setFont(font)
         self.cButton.setObjectName("cButton")
-        self.arrowButton = QtWidgets.QPushButton(self.centralwidget)
+        self.arrowButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.remove_it())
         self.arrowButton.setGeometry(QtCore.QRect(180, 110, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.arrowButton.setFont(font)
         self.arrowButton.setObjectName("arrowButton")
-        self.divideButton = QtWidgets.QPushButton(self.centralwidget)
+        self.divideButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("/"))
         self.divideButton.setGeometry(QtCore.QRect(265, 110, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.divideButton.setFont(font)
         self.divideButton.setObjectName("divideButton")
-        self.nineButton = QtWidgets.QPushButton(self.centralwidget)
+        self.nineButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("9"))
         self.nineButton.setGeometry(QtCore.QRect(180, 200, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.nineButton.setFont(font)
         self.nineButton.setObjectName("nineButton")
-        self.multiplyButton = QtWidgets.QPushButton(self.centralwidget)
+        self.multiplyButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("*"))
         self.multiplyButton.setGeometry(QtCore.QRect(265, 200, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.multiplyButton.setFont(font)
         self.multiplyButton.setObjectName("multiplyButton")
-        self.eightButton = QtWidgets.QPushButton(self.centralwidget)
+        self.eightButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("8"))
         self.eightButton.setGeometry(QtCore.QRect(95, 200, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.eightButton.setFont(font)
         self.eightButton.setObjectName("eightButton")
-        self.sevenButton = QtWidgets.QPushButton(self.centralwidget)
+        self.sevenButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("7"))
         self.sevenButton.setGeometry(QtCore.QRect(10, 200, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.sevenButton.setFont(font)
         self.sevenButton.setObjectName("sevenButton")
-        self.sixButton = QtWidgets.QPushButton(self.centralwidget)
+        self.sixButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("6"))
         self.sixButton.setGeometry(QtCore.QRect(180, 290, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.sixButton.setFont(font)
         self.sixButton.setObjectName("sixButton")
-        self.minusButton = QtWidgets.QPushButton(self.centralwidget)
+        self.minusButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("-"))
         self.minusButton.setGeometry(QtCore.QRect(265, 290, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.minusButton.setFont(font)
         self.minusButton.setObjectName("minusButton")
-        self.fiveButton = QtWidgets.QPushButton(self.centralwidget)
+        self.fiveButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("5"))
         self.fiveButton.setGeometry(QtCore.QRect(95, 290, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.fiveButton.setFont(font)
         self.fiveButton.setObjectName("fiveButton")
-        self.fourButton = QtWidgets.QPushButton(self.centralwidget)
+        self.fourButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("4"))
         self.fourButton.setGeometry(QtCore.QRect(10, 290, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.fourButton.setFont(font)
         self.fourButton.setObjectName("fourButton")
-        self.threeButton = QtWidgets.QPushButton(self.centralwidget)
+        self.threeButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("3"))
         self.threeButton.setGeometry(QtCore.QRect(180, 380, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.threeButton.setFont(font)
         self.threeButton.setObjectName("threeButton")
-        self.addButton = QtWidgets.QPushButton(self.centralwidget)
+        self.addButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("+"))
         self.addButton.setGeometry(QtCore.QRect(265, 380, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.addButton.setFont(font)
         self.addButton.setObjectName("addButton")
-        self.twoButton = QtWidgets.QPushButton(self.centralwidget)
+        self.twoButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("2"))
         self.twoButton.setGeometry(QtCore.QRect(95, 380, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.twoButton.setFont(font)
         self.twoButton.setObjectName("twoButton")
-        self.oneButton = QtWidgets.QPushButton(self.centralwidget)
+        self.oneButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("1"))
         self.oneButton.setGeometry(QtCore.QRect(10, 380, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.oneButton.setFont(font)
         self.oneButton.setObjectName("oneButton")
-        self.decimaButton = QtWidgets.QPushButton(self.centralwidget)
+        self.decimaButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.dot_it())
         self.decimaButton.setGeometry(QtCore.QRect(180, 470, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.decimaButton.setFont(font)
         self.decimaButton.setObjectName("decimaButton")
-        self.equalButton = QtWidgets.QPushButton(self.centralwidget)
+        self.equalButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.math_it())
         self.equalButton.setGeometry(QtCore.QRect(265, 470, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.equalButton.setFont(font)
         self.equalButton.setObjectName("equalButton")
-        self.zeroButton = QtWidgets.QPushButton(self.centralwidget)
+        self.zeroButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("0"))
         self.zeroButton.setGeometry(QtCore.QRect(95, 470, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
         font.setPointSize(48)
         self.zeroButton.setFont(font)
         self.zeroButton.setObjectName("zeroButton")
-        self.plusminusButton = QtWidgets.QPushButton(self.centralwidget)
+        self.plusminusButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.plus_minus_it())
         self.plusminusButton.setGeometry(QtCore.QRect(10, 470, 75, 75))
         font = QtGui.QFont()
         font.setFamily("Agency FB")
@@ -170,6 +170,56 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    # remove character
+    def remove_it(self):
+        # grab what's on the screen already
+        screen = self.outputLabel.text()
+        # remove the last item in the string
+        screen = screen[:-1]
+        # output the string back to the screen
+        self.outputLabel.setText(screen)
+
+    # change from negative/positive
+    def plus_minus_it(self):
+        # grab what's on the screen already
+        screen = self.outputLabel.text()
+        if "-" == screen[0]:
+            screen = screen[1:]
+            self.outputLabel.setText(screen)
+        else:
+            self.outputLabel.setText(f'-{screen}')
+
+    # Let's do some math
+    def math_it(self):
+        # grab what's on the screen already
+        screen = self.outputLabel.text()
+        try:
+            # do the math
+            answer = eval(screen)
+            # output the answer back to the screen
+            self.outputLabel.setText(str(answer))
+        except:
+            # output the error message back to the screen
+            self.outputLabel.setText("ERROR")
+
+    # add a decimal
+    def dot_it(self):
+        # grab what's on the screen already
+        screen = self.outputLabel.text()
+        if screen[-1] == ".":
+            pass
+        else:
+            self.outputLabel.setText(f'{screen}.')
+
+    def press_it(self, pressed):
+        if pressed == "C":
+            self.outputLabel.setText("0")
+        else:
+            # Check to see if starts with 0 and deletes it
+            if self.outputLabel.text() == "0":
+                self.outputLabel.setText("")
+            self.outputLabel.setText(f'{self.outputLabel.text()}{pressed}')
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -199,6 +249,7 @@ class Ui_MainWindow(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
