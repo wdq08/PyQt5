@@ -197,8 +197,12 @@ class Ui_MainWindow(object):
         try:
             # do the math
             answer = eval(screen)
+            # if the string is too long than cut off some of them
+            answer=str(answer)
+            if len(answer)>13:
+                answer=answer[0:13]
             # output the answer back to the screen
-            self.outputLabel.setText(str(answer))
+            self.outputLabel.setText(answer)
         except:
             # output the error message back to the screen
             self.outputLabel.setText("ERROR")

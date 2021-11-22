@@ -13,6 +13,16 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icon.ico</normaloff>../icon.ico</iconset>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>100</width>
+    <height>100</height>
+   </size>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
@@ -34,6 +44,9 @@
     </property>
     <property name="documentMode">
      <bool>false</bool>
+    </property>
+    <property name="tabsClosable">
+     <bool>true</bool>
     </property>
     <property name="movable">
      <bool>true</bool>

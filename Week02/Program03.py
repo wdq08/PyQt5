@@ -49,7 +49,8 @@ class Ui_MainWindow(object):
         self.actionHome.setObjectName("actionHome")
         self.actionRefresh = QtWidgets.QAction(MainWindow)
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../../icons/icons/arrow-circle-225-left.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("../../icons/icons/arrow-circle-225-left.png"), QtGui.QIcon.Normal,
+                        QtGui.QIcon.Off)
         self.actionRefresh.setIcon(icon1)
         self.actionRefresh.setObjectName("actionRefresh")
         self.actiondelete = QtWidgets.QAction(MainWindow)
@@ -99,6 +100,7 @@ class Ui_MainWindow(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
