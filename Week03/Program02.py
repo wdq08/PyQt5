@@ -4,17 +4,17 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(400, 500)
+        MainWindow.resize(400, 540)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.addItem_pushButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.add_it())
-        self.addItem_pushButton.setGeometry(QtCore.QRect(20, 110, 360, 30))
+        self.addItem_pushButton.setGeometry(QtCore.QRect(20, 110, 360, 35))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.addItem_pushButton.setFont(font)
         self.addItem_pushButton.setObjectName("addItem_pushButton")
         self.myList_listWidget = QtWidgets.QListWidget(self.centralwidget)
-        self.myList_listWidget.setGeometry(QtCore.QRect(20, 150, 360, 300))
+        self.myList_listWidget.setGeometry(QtCore.QRect(20, 190, 360, 300))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.myList_listWidget.setFont(font)
@@ -38,6 +38,12 @@ class Ui_MainWindow(object):
         font.setPointSize(20)
         self.clearAll_pushButton.setFont(font)
         self.clearAll_pushButton.setObjectName("clearAll_pushButton")
+        self.savedb_pushButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.save_it())
+        self.savedb_pushButton.setGeometry(QtCore.QRect(20, 150, 360, 35))
+        font = QtGui.QFont()
+        font.setPointSize(20)
+        self.savedb_pushButton.setFont(font)
+        self.savedb_pushButton.setObjectName("savedb_pushButton")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 400, 23))
@@ -73,12 +79,17 @@ class Ui_MainWindow(object):
     def clear_it(self):
         self.myList_listWidget.clear()
 
+    # Save the list to the database
+    def save_it(self):
+        pass
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "To Do List"))
         self.addItem_pushButton.setText(_translate("MainWindow", "Add Item to the List"))
         self.deleteItem_pushButton.setText(_translate("MainWindow", "Delete Item"))
         self.clearAll_pushButton.setText(_translate("MainWindow", "Clear All"))
+        self.savedb_pushButton.setText(_translate("MainWindow", "Save to Database"))
 
 
 if __name__ == "__main__":
