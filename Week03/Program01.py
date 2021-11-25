@@ -50,6 +50,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+
     # Add item to the list
     def add_it(self):
         # Grab the item from the input box
