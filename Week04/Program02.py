@@ -4,7 +4,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(360, 280)
+        MainWindow.resize(360, 250)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.red_checkBox = QtWidgets.QCheckBox(self.centralwidget)
@@ -22,16 +22,8 @@ class Ui_MainWindow(object):
         self.blue_checkBox.setFont(font)
         self.blue_checkBox.setStyleSheet("color:blue;")
         self.blue_checkBox.setObjectName("blue_checkBox")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.checked())
-        self.pushButton.setGeometry(QtCore.QRect(30, 130, 300, 30))
-        font = QtGui.QFont()
-        font.setPointSize(19)
-        self.pushButton.setFont(font)
-        self.pushButton.setStyleSheet("color:qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.05 rgba(14, 8, 73, 255), stop:0.36 rgba(28, 17, 145, 255), stop:0.6 rgba(126, 14, 81, 255), stop:0.75 rgba(234, 11, 11, 255), stop:0.79 rgba(244, 70, 5, 255), stop:0.86 rgba(255, 136, 0, 255), stop:0.935 rgba(239, 236, 55, 255));\n"
-"background-color:qlineargradient(spread:pad, x1:1, y1:0.5, x2:0, y2:0.5, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));")
-        self.pushButton.setObjectName("pushButton")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(30, 190, 300, 40))
+        self.label.setGeometry(QtCore.QRect(30, 150, 300, 40))
         font = QtGui.QFont()
         font.setPointSize(22)
         self.label.setFont(font)
@@ -40,7 +32,7 @@ class Ui_MainWindow(object):
         self.label.setObjectName("label")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 360, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 360, 23))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -50,31 +42,26 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-        # Set red checked by default
-        # self.red_checkBox.setChecked(True)
+        # Update check boxes
+        # Use stateChanged if you want to know the state of the check boxes
+        self.red_checkBox.stateChanged.connect(lambda: self.btnstate())
+        # Use toggled is you don't care about the state of the check boxes
+        self.blue_checkBox.toggled.connect(lambda: self.btnstate())
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.red_checkBox.setText(_translate("MainWindow", "Red"))
         self.blue_checkBox.setText(_translate("MainWindow", "Blue"))
-        self.pushButton.setText(_translate("MainWindow", "Submit"))
         self.label.setText(_translate("MainWindow", "Pick a color"))
 
-    def checked(self):
-        # The first way
-        # 0 is unchecked and 2 is checked
-        print(self.red_checkBox.checkState())
-
-        # The second way
+    def btnstate(self):
         if self.red_checkBox.isChecked():
             self.red = "Red"
-            self.label.setStyleSheet("color:rgb(255, 0, 0)")
         else:
             self.red = ""
         if self.blue_checkBox.isChecked():
             self.blue = "Blue"
-            self.label.setStyleSheet("color:rgb(0, 0, 255)")
         else:
             self.blue = ""
 
